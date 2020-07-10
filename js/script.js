@@ -79,8 +79,15 @@ const getRandomQuote = () =>{
 ***/
 
 const printQuote = () =>{
+  const quote = getRandomQuote();
   
+  let html =`
+<p class="quote">${quote.quote}</p>
+<p class="source">${quote.source} (${quote.actor})<span class="citation">${quote.citation}</span><span class="year">${quote.year}</span></p>
+`;
+
 }
+
 
 /***
  * click event listener for the print quote button
