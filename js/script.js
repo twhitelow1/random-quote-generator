@@ -1,14 +1,18 @@
 /******************************************
 Treehouse FSJS Techdegree:
 project 1 - A Random Quote Generator
-******************************************/
 
-// For assistance: 
-  // Check the "Project Resources" section of the project instructions
-  // Reach out in your Slack community - https://treehouse-fsjs-102.slack.com/app_redirect?channel=chit-chat
+Author: Todd Whitelow Jr.
+
+An application made for my techdegree that showcases unit 1 skills.
+Generates a random quote for display on the page.
+******************************************/
 
 /*** 
  * `quotes` array 
+ * 
+ * List of quotes to be used .
+ *
 ***/
 const quotes = [
   {
@@ -54,6 +58,12 @@ const quotes = [
 
 /***
  * `getRandomNum` function
+ * 
+ * Returns a random number between two numbers.
+ *
+ * @param {number} min - The lowest number value.
+ * @param {number} max - The highest number value.
+ * @return {number} The random number value.
 ***/
 
 const getRandomNum = (min, max) =>{
@@ -63,6 +73,15 @@ const getRandomNum = (min, max) =>{
 
 /***
  * `getRandomColor` function
+ * 
+ *  Returns a random color.
+ *  Uses the getRandomNum function to generate a number  0 - 255  for each rgb value and returns the rgb() color
+ *
+ * @param {number} red - The rgb red number 0 - 255
+ * @param {number} green - The rgb green number 0 - 255
+ * @param {number} blue - The rgb blue number 0 - 255
+ * @return {string} The random rgb value.
+***/
 ***/
 const getRandomColor = () =>{
   let red = getRandomNum(0, 255);
@@ -74,16 +93,30 @@ const getRandomColor = () =>{
 
 /***
  * `setRandomBgColor` function
+ * 
+ *  Changes the background color of the the body using a random color.
+ *  Uses the getRandomColor function to generate a rgb color
+ *  Uses the document object to add the background color that is generated
+ *
+ * @param {number} color - Stores the value of the getRandomColor rgb string
+ * @return none
 ***/
 
 const changeBgColor = () =>{
   color = getRandomColor();
-  console.log(color);
+  //console.log(color);
   document.body.style.backgroundColor = color;
 }
 
 /***
  * `getRandomQuote` function
+ * 
+ *  *  Changes the background color of the the body using a random color.
+ *  Uses the getRandomColor function to generate a rgb color
+ *  Uses the document object to add the background color that is generated
+ *
+ * @param {number} color - Stores the value of the getRandomColor rgb string
+ * @return none
 ***/
 
 const getRandomQuote = () =>{
