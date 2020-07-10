@@ -86,6 +86,8 @@ const printQuote = () =>{
 <p class="source">${quote.source} (${quote.actor})<span class="citation">${quote.citation}</span><span class="year">${quote.year}</span></p>
 `;
 
+document.querySelector('.quotebox').innerHTML = html;
+
 }
 
 
