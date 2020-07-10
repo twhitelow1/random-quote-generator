@@ -156,6 +156,9 @@ changeBgColor();
 
 }
 
+// Start with a random quote
+printQuote();
+
 // Set quotes to automatically load a new quote every 15 seconds
 setInterval(printQuote, 15000);
 
