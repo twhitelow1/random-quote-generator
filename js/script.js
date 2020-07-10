@@ -6,6 +6,8 @@ Author: Todd Whitelow Jr.
 
 An application made for my techdegree that showcases unit 1 skills.
 Generates a random quote for display on the page.
+
+I am hopeing to get an Exceeds Expectations grade on this project
 ******************************************/
 
 /*** 
