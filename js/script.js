@@ -82,7 +82,7 @@ const getRandomNum = (min, max) =>{
  * @param {number} blue - The rgb blue number 0 - 255
  * @return {string} The random rgb value.
 ***/
-***/
+
 const getRandomColor = () =>{
   let red = getRandomNum(0, 255);
   let green = getRandomNum(0, 255);
