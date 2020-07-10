@@ -80,13 +80,23 @@ const getRandomQuote = () =>{
 
 const printQuote = () =>{
   const quote = getRandomQuote();
-  
+  console.log(quote);
   let html =`
 <p class="quote">${quote.quote}</p>
-<p class="source">${quote.source} (${quote.actor})<span class="citation">${quote.citation}</span><span class="year">${quote.year}</span></p>
+<p class="source">${quote.source} (${quote.actor})
 `;
 
-document.querySelector('.quotebox').innerHTML = html;
+if(quote.citation !== undefined){
+  html += `<span class="citation">${quote.citation}</span>`;
+}
+
+if(quote.year !== undefined){
+  html += `<span class="year">${quote.year}</span>`;
+}
+
+html += `</p>`
+
+document.getElementById('quote-box').innerHTML = html;
 
 }
 
