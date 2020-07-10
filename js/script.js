@@ -111,7 +111,7 @@ const getRandomColor = () =>{
 
 const changeBgColor = () =>{
   color = getRandomColor();
-  //console.log(color);
+  
   document.body.style.backgroundColor = color;
 }
 
@@ -145,30 +145,36 @@ const getRandomQuote = () =>{
 ***/
 
 const printQuote = () =>{
+  // grab a random quote
   const quote = getRandomQuote();
-  console.log(quote);
+
+  // Start the html string with the 2 required quote object properties
   let html =`
-<p class="quote">${quote.quote}</p>
-<p class="source">${quote.source}
-`;
+  <p class="quote">${quote.quote}</p>
+  <p class="source">${quote.source}
+  `;
 
-if(quote.actor !== undefined){
-  html += `(${quote.actor})`;
-}
+  // Check the 3 optional quote properties for having an assigned value and if they do have a value then add it to the html
+  if(quote.actor !== undefined){
+    html += `(${quote.actor})`;
+  }
 
-if(quote.citation !== undefined){
-  html += `<span class="movie">${quote.movie}</span>`;
-}
+  if(quote.citation !== undefined){
+    html += `<span class="movie">${quote.movie}</span>`;
+  }
 
-if(quote.year !== undefined){
-  html += `<span class="year">${quote.year}</span>`;
-}
+  if(quote.year !== undefined){
+    html += `<span class="year">${quote.year}</span>`;
+  }
 
-html += `</p>`
+  // Close last paragraph now that we have checked for the extra object properties
+  html += `</p>`
 
-document.getElementById('quote-box').innerHTML = html;
-changeBgColor();
+  //Now add the quote to the html with getElementByID
+  document.getElementById('quote-box').innerHTML = html;
 
+  // After injecting the quote into html change the bg color
+  changeBgColor();
 }
 
 // Call the printQuote() function to start with a random quote
