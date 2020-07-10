@@ -12,7 +12,12 @@ Generates a random quote for display on the page.
  * `quotes` array 
  * 
  * List of quotes to be used .
- *
+ * 
+ * Map of quote object
+ * @property {string} quote - The quote
+ * @property {string} source - Character who said the quote
+ * @property {string} movie - Marvel movie that this quote is from
+ * @property {string} year - Year this movie was relased
 ***/
 const quotes = [
   {
@@ -23,35 +28,35 @@ const quotes = [
     quote: `This drink, I like it. Another!`,
     source:`Thor `,
     actor: `Chris Hemsworth`,
-    citation:`Thor`,
+    movie:`Thor`,
     year: `2011`
   },
   {
     quote: `I can do this all day.`,
     source:`Steve Rodgers `,
     actor: `Chris Evans`,
-    citation:`Captain America: The First Avenger`,
+    movie:`Captain America: The First Avenger`,
     year: `2011`
   },
   {
     quote: `That’s my secret, Captain. I’m always angry.`,
     source:`Bruce Banner`,
     actor: `Mark Ruffalo`,
-    citation:`The Advengers`,
+    movie:`The Advengers`,
     year: `2012`
   },
   {
     quote: `It’s good to meet you, Dr. Banner. Your work on anti-electron collisions is unparalleled. And I’m a huge fan of the way you lose control and turn into an enormous green rage monster.`,
     source:`Tony Stark`,
     actor: `Robert Downey Jr`,
-    citation:`The Advengers`,
+    movie:`The Advengers`,
     year: `2012`
   },
   {
     quote: `Hey fellas, either one of you know where the Smithsonian is? I’m here to pick up a fossil.`,
     source:`Natasha Romanoff`,
     actor: `Scarlet Johansson`,
-    citation:`2014`,
+    movie:`2014`,
     year: `2014`
   }
 ]
@@ -111,7 +116,7 @@ const changeBgColor = () =>{
 /***
  * `getRandomQuote` function
  * 
- *  *  Changes the background color of the the body using a random color.
+ *  Changes the background color of the the body using a random color.
  *  Uses the getRandomColor function to generate a rgb color
  *  Uses the document object to add the background color that is generated
  *
@@ -127,6 +132,14 @@ const getRandomQuote = () =>{
 
 /***
  * `printQuote` function
+ * 
+ *  Changes the background color of the the body using a random color.
+ *  Uses the getRandomColor function to generate a rgb color
+ *  Uses the document object to add the background color that is generated
+ *
+ * @param {number} quote - Stores the random quote object generated from getRandomQuote()
+ * @param {number} html - Stores the html string that will be built with interpolated quote object data and then injected in to html
+ * @return undefined this function just changes the dom object quote-box where the quote is displayed
 ***/
 
 const printQuote = () =>{
@@ -142,7 +155,7 @@ if(quote.actor !== undefined){
 }
 
 if(quote.citation !== undefined){
-  html += `<span class="citation">${quote.citation}</span>`;
+  html += `<span class="movie">${quote.movie}</span>`;
 }
 
 if(quote.year !== undefined){
@@ -156,7 +169,7 @@ changeBgColor();
 
 }
 
-// Start with a random quote
+// Call the printQuote() function to start with a random quote
 printQuote();
 
 // Set quotes to automatically load a new quote every 15 seconds
