@@ -60,17 +60,26 @@ const getRandomNum = (min, max) =>{
   let random = Math.floor(Math.random() * (max - min) + min);
   return random;
 }
+
+/***
+ * `getRandomColor` function
+***/
 const getRandomColor = () =>{
   let red = getRandomNum(0, 255);
   let green = getRandomNum(0, 255);
   let blue =  getRandomNum(0, 255);
-  return `rgb(${red}, ${green}, ${blue})`
+  return `rgb(${red}, ${green}, ${blue})`;
 }
 
-const setRandomBgColor = () =>{
-  color = getRandomColor;
-  console.log(color)
-  document.querySelector('body').style.background-color = color;
+
+/***
+ * `setRandomBgColor` function
+***/
+
+const changeBgColor = () =>{
+  color = getRandomColor();
+  console.log(color);
+  document.body.style.backgroundColor = color;
 }
 
 /***
@@ -110,8 +119,12 @@ if(quote.year !== undefined){
 html += `</p>`
 
 document.getElementById('quote-box').innerHTML = html;
+changeBgColor();
 
 }
+
+// Set quotes to automatically load a new quote every 15 seconds
+setInterval(printQuote, 15000);
 
 
 /***
