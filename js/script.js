@@ -12,42 +12,39 @@ project 1 - A Random Quote Generator
 ***/
 const quotes = [
   {
-    quote: `"I'm about to do to you what Limp Bizkit did to music in the late '90s."`,
+    quote: `I'm about to do to you what Limp Bizkit did to music in the late '90s.`,
     source:`deadpool`,
-    actor: ``,
-    citation:`Deadpool Movie`,
-    year: `2016`
   },
   {
-    quote: `"This drink, I like it. Another!"`,
+    quote: `This drink, I like it. Another!`,
     source:`Thor `,
     actor: `Chris Hemsworth`,
     citation:`Thor`,
     year: `2011`
   },
   {
-    quote: `"“I can do this all day.”"`,
+    quote: `I can do this all day.`,
     source:`Steve Rodgers `,
     actor: `Chris Evans`,
     citation:`Captain America: The First Avenger`,
     year: `2011`
   },
   {
-    quote: `“That’s my secret, Captain. I’m always angry.”`,
+    quote: `That’s my secret, Captain. I’m always angry.`,
     source:`Bruce Banner`,
     actor: `Mark Ruffalo`,
     citation:`The Advengers`,
     year: `2012`
   },
   {
-    quote: `“It’s good to meet you, Dr. Banner. Your work on anti-electron collisions is unparalleled. And I’m a huge fan of the way you lose control and turn into an enormous green rage monster.”`,
+    quote: `It’s good to meet you, Dr. Banner. Your work on anti-electron collisions is unparalleled. And I’m a huge fan of the way you lose control and turn into an enormous green rage monster.`,
     source:`Tony Stark`,
     actor: `Robert Downey Jr`,
     citation:`The Advengers`,
     year: `2012`
   },
   {
-    quote: `“Hey fellas, either one of you know where the Smithsonian is? I’m here to pick up a fossil.”`,
+    quote: `Hey fellas, either one of you know where the Smithsonian is? I’m here to pick up a fossil.`,
     source:`Natasha Romanoff`,
     actor: `Scarlet Johansson`,
     citation:`2014`,
@@ -62,6 +59,18 @@ const quotes = [
 const getRandomNum = (min, max) =>{
   let random = Math.floor(Math.random() * (max - min) + min);
   return random;
+}
+const getRandomColor = () =>{
+  let red = getRandomNum(0, 255);
+  let green = getRandomNum(0, 255);
+  let blue =  getRandomNum(0, 255);
+  return `rgb(${red}, ${green}, ${blue})`
+}
+
+const setRandomBgColor = () =>{
+  color = getRandomColor;
+  console.log(color)
+  document.querySelector('body').style.background-color = color;
 }
 
 /***
@@ -83,8 +92,12 @@ const printQuote = () =>{
   console.log(quote);
   let html =`
 <p class="quote">${quote.quote}</p>
-<p class="source">${quote.source} (${quote.actor})
+<p class="source">${quote.source}
 `;
+
+if(quote.actor !== undefined){
+  html += `(${quote.actor})`;
+}
 
 if(quote.citation !== undefined){
   html += `<span class="citation">${quote.citation}</span>`;
