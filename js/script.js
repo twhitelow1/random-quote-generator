@@ -18,7 +18,7 @@ I am hopeing to get an Exceeds Expectations grade on this project
  * Map of quote object
  * @property {string} quote - The quote
  * @property {string} source - Character who said the quote
- * @property {string} movie - Marvel movie that this quote is from
+ * @property {string} citation - Marvel movie that this quote is from
  * @property {string} year - Year this movie was relased
 ***/
 const quotes = [
@@ -30,35 +30,35 @@ const quotes = [
     quote: `This drink, I like it. Another!`,
     source:`Thor `,
     actor: `Chris Hemsworth`,
-    movie:`Thor`,
+    citation:`Thor`,
     year: `2011`
   },
   {
     quote: `I can do this all day.`,
     source:`Steve Rodgers `,
     actor: `Chris Evans`,
-    movie:`Captain America: The First Avenger`,
+    citation:`Captain America: The First Avenger`,
     year: `2011`
   },
   {
     quote: `That’s my secret, Captain. I’m always angry.`,
     source:`Bruce Banner`,
     actor: `Mark Ruffalo`,
-    movie:`The Advengers`,
+    citation:`The Advengers`,
     year: `2012`
   },
   {
     quote: `It’s good to meet you, Dr. Banner. Your work on anti-electron collisions is unparalleled. And I’m a huge fan of the way you lose control and turn into an enormous green rage monster.`,
     source:`Tony Stark`,
     actor: `Robert Downey Jr`,
-    movie:`The Advengers`,
+    citation:`The Advengers`,
     year: `2012`
   },
   {
     quote: `Hey fellas, either one of you know where the Smithsonian is? I’m here to pick up a fossil.`,
     source:`Natasha Romanoff`,
     actor: `Scarlet Johansson`,
-    movie:`2014`,
+    citation:`2014`,
     year: `2014`
   }
 ]
@@ -160,7 +160,7 @@ const printQuote = () =>{
   }
 
   if(quote.citation !== undefined){
-    html += `<span class="movie">${quote.movie}</span>`;
+    html += `<span class="movie">${quote.citation}</span>`;
   }
 
   if(quote.year !== undefined){
