@@ -95,7 +95,7 @@ h1 {
 
 .quote:after {
   content: "”";
-  bottom: -0.1em;
+  bottom: -500px;
   margin-left: 0.1em;
   position: absolute;
 }
