@@ -64,7 +64,7 @@ const quotes = [
     quote: `Hey fellas, either one of you know where the Smithsonian is? I’m here to pick up a fossil.`,
     source:`Natasha Romanoff`,
     actor: `Scarlet Johansson`,
-    citation:`2014`,
+    citation:`Captain America: The Winter Soldier`,
     year: `2014`,
     img:`https://vignette.wikia.nocookie.net/marveldatabase/images/6/68/Avengers_Endgame_poster_044_Textless.jpg`
   }
