@@ -55,7 +55,7 @@ const quotes = [
     source:`Tony Stark`,
     actor: `Robert Downey Jr`,
     citation:`The Advengers`,
-    year: `2012`
+    year: `2012`,
     img: `https://vignette.wikia.nocookie.net/manowrites/images/d/d9/IronMan-EndgameProfile_%281%29.jpg`
   },
   {
@@ -132,7 +132,7 @@ const changeBgColor = () =>{
 ***/
 
 const getRandomQuote = () =>{
-  let randomNumber = getRandomNum(0, quotes.length - 1);
+  let randomNumber = getRandomNum(0, quotes.length);
   return quotes[randomNumber];
   
 }
@@ -179,7 +179,13 @@ const printQuote = () =>{
   document.getElementById('quote-box').innerHTML = html;
 
   //Now add the image to the html element ID quote-image-box
-  document.getElementById('quote-image-box').innerHTML = `<img id="quote-image" src="${quote.img}" alt"${quote.actor}" > `;
+  let imgHTML = ``;
+  if(quote.img === undefined){
+     imgHTML = ` `;
+  }else{
+     imgHTML = `<img id="quote-image" class="quote-image" src="${quote.img}" alt"${quote.actor}" > `;
+    document.getElementById('quote-img-box').innerHTML = imgHTML;
+  }
 
   // After injecting the quote into html change the bg color
   changeBgColor();

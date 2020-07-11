@@ -55,26 +55,30 @@ h1 {
   max-width: 1024px;
   margin: auto;
   padding: 5px;
+  display: flex;
+  flex-direction: row;
 }
 
 .quote-box {
   text-shadow: 1px 1px 1px rgba(50, 50, 50, 0.3);
   line-height: 0.5;
+  width: 80%;
 }
 
 .quote {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.2;
   position: relative;
   margin: 0;
   margin-left: 10px;
+  margin-right: 20px;
 }
 
 .quote:before,
 .quote:after {
   font-size: 3rem;
-  line-height: 2.5rem;
+  line-height: 2rem;
   position: absolute;
 }
 
@@ -117,6 +121,14 @@ h1 {
   font-style: normal;
 }
 
+.quote-image{
+  width: 200px;
+  height: 300px;
+  border-radius: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.9);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
 @media (min-width: 768px) {
   body {
     padding: 25px;
@@ -141,8 +153,10 @@ h1 {
   .container {
     padding: 25px 25px 15px 55px;
     background: rgba(0, 0, 0, 0.1);
-    border-left: 5px solid rgba(0, 0, 0, 0.3);
+    border: 5px solid rgba(0, 0, 0, 0.3);
+    border-right: 5px solid rgba(0, 0, 0, 0.3);
     border-radius: 0 4px 4px 0;
+    
   }
 
   .quote {
@@ -164,5 +178,12 @@ h1 {
 
   .source {
     font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .container{
+  flex-direction: column;
+  justify-content: center;
   }
 }
