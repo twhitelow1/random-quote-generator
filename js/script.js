@@ -23,8 +23,10 @@ I am hopeing to get an Exceeds Expectations grade on this project
 ***/
 const quotes = [
   {
-    quote: `I'm about to do to you what Limp Bizkit did to music in the late '90s.`,
-    source:`deadpool`,
+    quote: `Oh, I’m sorry. I don’t know how this machine works…`,
+    source:`Peter Quill AKA Star Lord`,
+    citation: `Guardians of the Galaxy`,
+    img: `https://vignette.wikia.nocookie.net/marvelcinematicuniverse/images/9/96/Star-Lord_AIW_Profile.jpg`
   },
   {
     quote: `This drink, I like it. Another!`,
