@@ -101,11 +101,11 @@ h1 {
   content: "—";
 }
 
-.movie {
+.citation {
   font-style: italic;
 }
 
-.movie:before {
+.citation:before {
   content: ", ";
   font-style: normal;
 }

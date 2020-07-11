@@ -160,7 +160,7 @@ const printQuote = () =>{
   }
 
   if(quote.citation !== undefined){
-    html += `<span class="movie">${quote.citation}</span>`;
+    html += `<span class="citation">${quote.citation}</span>`;
   }
 
   if(quote.year !== undefined){
