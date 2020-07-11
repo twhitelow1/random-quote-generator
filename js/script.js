@@ -31,21 +31,24 @@ const quotes = [
     source:`Thor `,
     actor: `Chris Hemsworth`,
     citation:`Thor`,
-    year: `2011`
+    year: `2011`,
+    img: `https://vignette.wikia.nocookie.net/marvelcinematicuniverse/images/1/13/Thor-EndgameProfile.jpg`
   },
   {
     quote: `I can do this all day.`,
     source:`Steve Rodgers `,
     actor: `Chris Evans`,
     citation:`Captain America: The First Avenger`,
-    year: `2011`
+    year: `2011`,
+    img: `https://vignette.wikia.nocookie.net/marvelcinematicuniverse/images/d/d7/CapAmerica-EndgameProfile.jpg`
   },
   {
     quote: `That’s my secret, Captain. I’m always angry.`,
     source:`Bruce Banner`,
     actor: `Mark Ruffalo`,
     citation:`The Advengers`,
-    year: `2012`
+    year: `2012`,
+    img: `https://cdn.collider.com/wp-content/uploads/2018/04/avengers-infinity-war-poster-mark-ruffalo-hulk.jpg`
   },
   {
     quote: `It’s good to meet you, Dr. Banner. Your work on anti-electron collisions is unparalleled. And I’m a huge fan of the way you lose control and turn into an enormous green rage monster.`,
@@ -53,13 +56,15 @@ const quotes = [
     actor: `Robert Downey Jr`,
     citation:`The Advengers`,
     year: `2012`
+    img: `https://vignette.wikia.nocookie.net/manowrites/images/d/d9/IronMan-EndgameProfile_%281%29.jpg`
   },
   {
     quote: `Hey fellas, either one of you know where the Smithsonian is? I’m here to pick up a fossil.`,
     source:`Natasha Romanoff`,
     actor: `Scarlet Johansson`,
     citation:`2014`,
-    year: `2014`
+    year: `2014`,
+    img:`https://vignette.wikia.nocookie.net/marveldatabase/images/6/68/Avengers_Endgame_poster_044_Textless.jpg`
   }
 ]
 
@@ -172,6 +177,9 @@ const printQuote = () =>{
 
   //Now add the quote to the html with getElementByID
   document.getElementById('quote-box').innerHTML = html;
+
+  //Now add the image to the html element ID quote-image-box
+  document.getElementById('quote-image-box').innerHTML = `<img id="quote-image" src="${quote.img}" alt"${quote.actor}" > `;
 
   // After injecting the quote into html change the bg color
   changeBgColor();
