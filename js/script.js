@@ -181,7 +181,6 @@ const printQuote = () =>{
   //Now add the image to the html element ID quote-image-box
   let imgHTML = ``;
   if(quote.img === undefined){
-    console.log('No image');
      imgHTML = ``;
      document.getElementById('quote-img-box').innerHTML = imgHTML;
   }else{
